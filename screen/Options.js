@@ -18,23 +18,24 @@ const styles = StyleSheet.create({
   },
   elvTopLeft: {
     color: "#fff",
-    marginTop: -5,
+    marginTop: 5,
     marginLeft: 20,
     fontSize: 10,
   },
-  topView: {
-    marginTop: 200,
-  },
-  header: {
+  logoContainer: {
     justifyContent: "center",
-    textAlign: "center",
+    alignItems: "center",
     marginTop: 150,
+  },
+  logo: {
+    width: 250,
+    height: 45,
   },
   row1: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: 350,
+    width: 320,
     height: 50,
     margin: 10,
     borderRadius: 10,
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: 350,
+    width: 320,
     height: 50,
     margin: 10,
     borderRadius: 10,
@@ -56,20 +57,17 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: 350,
+    width: 320,
     height: 50,
     margin: 10,
     borderRadius: 10,
     shadowOpacity: 0.4,
     backgroundColor: colors.purple,
   },
-  logo: {
-    width: 310,
-    height: 45,
-    marginLeft: 30,
-    // justifyContent: "center",
-    // textAlign: "center",
-    // alignItems: "center",
+  buttons: {
+    marginTop: 150,
+    justifyContent: "center",
+    alignItems: "center",
   },
   button: {
     justifyContent: "center",
@@ -84,10 +82,15 @@ export default () => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
       <Text style={styles.elvTopLeft}>ELEVATED</Text>
-      <TouchableOpacity style={styles.header}>
-        <Image style={styles.logo} source={require("../assets/logo.png")} />
-      </TouchableOpacity>
-      <View style={styles.topView}>
+
+      <View style={styles.logoContainer}>
+        <Image
+          style={styles.logo}
+          source={require("../assets/logo.png")}
+          resizeMode="contain"
+        />
+      </View>
+      <View style={styles.buttons}>
         <TouchableOpacity
           onPress={() => alert("GET GREEN!")}
           style={styles.row1}
