@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     width: 250,
     height: 45,
   },
-  row1: {
+  button1: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.4,
     backgroundColor: colors.brown,
   },
-  row2: {
+  button2: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.4,
     backgroundColor: colors.green,
   },
-  row3: {
+  button3: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -93,19 +93,19 @@ export default () => {
       <View style={styles.buttons}>
         <TouchableOpacity
           onPress={() => alert("GET GREEN!")}
-          style={styles.row1}
+          style={styles.button1}
         >
           <Text style={styles.button}>GET GREEN</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => alert("FINAL TALENT")}
-          style={styles.row2}
+          style={styles.button2}
         >
           <Text style={styles.button}>FINAL TALENT</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => alert("WELCOME BACK")}
-          style={styles.row3}
+          style={styles.button3}
         >
           <Text style={styles.button}>WELCOME BACK</Text>
         </TouchableOpacity>
