@@ -6,6 +6,7 @@ import {
   View,
   SafeAreaView,
   StatusBar,
+  Image,
 } from "react-native";
 import colors from "../components/colors";
 
@@ -22,15 +23,12 @@ const styles = StyleSheet.create({
     fontSize: 10,
   },
   topView: {
-    marginTop: 100,
+    marginTop: 200,
   },
   header: {
-    color: "white",
-    fontSize: 50,
-    fontWeight: "bold",
     justifyContent: "center",
     textAlign: "center",
-    marginTop: 200,
+    marginTop: 150,
   },
   row1: {
     display: "flex",
@@ -65,11 +63,13 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.4,
     backgroundColor: colors.purple,
   },
-  v: {
-    color: colors.lightpurple,
-  },
-  a: {
-    color: colors.lightgreen,
+  logo: {
+    width: 310,
+    height: 45,
+    marginLeft: 30,
+    // justifyContent: "center",
+    // textAlign: "center",
+    // alignItems: "center",
   },
   button: {
     justifyContent: "center",
@@ -84,12 +84,9 @@ export default () => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
       <Text style={styles.elvTopLeft}>ELEVATED</Text>
-      <Text style={styles.header}>
-        ELE
-        <Text style={styles.v}>V</Text>
-        <Text style={styles.a}>A</Text>
-        TED
-      </Text>
+      <TouchableOpacity style={styles.header}>
+        <Image style={styles.logo} source={require("../assets/logo.png")} />
+      </TouchableOpacity>
       <View style={styles.topView}>
         <TouchableOpacity
           onPress={() => alert("GET GREEN!")}
